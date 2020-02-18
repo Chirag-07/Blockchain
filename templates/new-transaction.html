@@ -1,0 +1,29 @@
+{% extends '/layouts/main.html' %}
+{% block content %}
+
+{% if not message %}
+<form action='/transaction/new' method='post' id='new-tran' class='new-tran'>
+  SENDER:
+  <input type='text' id='transaction-sender' class='transaction-sender' name='sender'/>
+  RECEIVER:
+  <input type='text' id='transaction-receiver' class='transaction-receiver' name='receiver' />
+  AMOUNT:
+  <input type='number' id='transaction-amount' class='trnasaction-amount' name='amount'/>
+
+  <button type='submit' value='send'> SUBMIT </button>
+
+{% endif %}
+
+{% if message %}
+<br>
+<div class='transaction-msg'>
+
+  {{message}}
+
+</div>
+{% endif %}
+
+
+</form>
+
+{% endblock content %}

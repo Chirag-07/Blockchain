@@ -1,0 +1,17 @@
+{% extends '/layouts/main.html' %}
+{% block content %}
+
+<form method='post' action='/node/register'>
+  <b>Register Yourself:</b><br>
+  Please Enter Your IP Address:
+  <input type='text' id='reg' name='register' />
+
+  <button type='submit' value='send'> SUBMIT </button>
+</form>
+
+{% if response %}
+<p>{{response.message}}<br>
+{{response.total_nodes}}</p><br>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends '/layouts/main.html' %}
+{% block content %}
+
+<div class='mined-block'>
+{{response.message}}<br>
+  -> Block Index: {{response.index}}<br>
+  -> Block Proof: {{response.proof}}<br>
+  -> Hash of previous block: {{response.previous_hash}}<br>
+
+</div>
+{% endblock content %}

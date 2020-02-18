@@ -1,0 +1,23 @@
+{% extends '/layouts/main.html' %}
+{% block content %}
+<br>
+{% if chain %}
+{{message}}
+{% for i in range(0,len) %}
+<p>
+Index: {{chain[i]['index']}}
+Timestamp: {{chain[i]['timestamp']}}<br>
+Transactions: {{chain[i]['transactions']}}<br>
+Proof: {{chain[i]['proof']}}<br>
+Previous Hash: {{chain[i]['previous_hash']}}
+</p>
+<br>
+{% endfor %}
+{% endif %}
+<br>
+{% if chain_length %}
+<p>Length of Blockchain: {{chain_length}}<p>
+{% endif %}
+<br>
+
+{% endblock %}

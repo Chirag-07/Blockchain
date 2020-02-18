@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> {% block title %} {{title}} {% endblock title %} </title>
+<body>
+<form action='/' method='post'>
+  <button type='submit'> HOMEPAGE </button>
+</form>
+  {% block content %}
+  <form action="/node/resolve" method='get' id='resolve'>
+    <label for='resolve'> Resolve Nodes ->
+      <button type='submit' value='Resolve'> RESOLVE </button>
+    </label>
+  </form>
+
+  <form action='/mine' id='mining' class='mining' method='post'>
+    <label for='mine'> MINE
+      <button type='submit' value='MINE'> MINE </button>
+    </label>
+  </form>
+
+  <form action='/chain' id='chains' class='chains' method='get'>
+    <label for='chain'> Chain
+      <button type='submit'> Show Chain </button>
+    </label>
+  </form>
+
+  <form action='/new-transaction' id='new-tran' class='new-tran' method='get'>
+    <label for='tran'> New Transaction
+      <button type='submit'> New Transaction </button>
+    </label>
+  </form>
+
+  <form action='/register-node' id='reg-node' method='get'>
+    <label for='r_node'> Register
+      <button type='submit'> Register </button>
+    </label>
+  </form>
+
+  {% endblock %}
+</body>
+</html>
